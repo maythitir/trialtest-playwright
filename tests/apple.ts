@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+test.beforeEach{}
+
 test('test', async ({ page }) => {
   await page.goto('https://www.apple.com/th/');
   await page.getByRole('navigation', { name: 'ทั่วโลก' }).getByRole('link', { name: 'iPhone', exact: true }).click();
